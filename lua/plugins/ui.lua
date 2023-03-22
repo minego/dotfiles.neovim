@@ -178,9 +178,9 @@ return {
 						-- The global working dir is returned with `getcwd(-1, -1)` and
 						-- that need to be set for each new tab or it will have the working
 						-- directory of the tab that created it
-						c			= { "<c-\\><c-n>:$tabnew<CR>:call chdir(getcwd(-1, -1))<CR>",
+						C			= { "<c-\\><c-n>:$tabnew<CR>:call chdir(getcwd(-1, -1))<CR>",
 																	"create"				},
-						t			= { "<c-\\><c-n>:$tabnew<CR>:call chdir(getcwd(-1, -1))<CR>:term<CR>",
+						c			= { "<c-\\><c-n>:$tabnew<CR>:call chdir(getcwd(-1, -1))<CR>:term<CR>",
 																	"create terminal"		},
 						x			= { "<c-\\><c-n>:tabclose<CR>",	"close"					},
 						n			= { "<c-\\><c-n>:tabn<CR>",		"next"					},
@@ -206,4 +206,11 @@ return {
 			end
 		end,
 	},
+
+	-- Make buffer scoped to tabs
+	{
+		'tiagovla/scope.nvim',
+		opts = {
+		},
+	}
 }

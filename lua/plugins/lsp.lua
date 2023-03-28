@@ -73,7 +73,13 @@ return {
 		'neovim/nvim-lspconfig',
 
 		config = function()
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+			-- This avoids conflicts with null-ls
+			capabilities.offsetEncoding = { "utf-16" }
+
 			require'lspconfig'.clangd.setup{
+				capabilities = capabilities,
 				filetypes = {"c", "cpp", "objc", "objcpp"},
 			}
 

@@ -81,6 +81,16 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead", "BufEnter", "BufWinEnter",
 	end,
 })
 
+-- Auto reload contents of a buffer
+vim.api.nvim_create_autocmd({"FocusGained", "BufEnter", "CursorHold", "CursorHoldI"}, {
+	pattern = { "*" },
+	callback = function()
+		vim.api.nvim_command('checktime')
+	end,
+})
+
+
+
 -- Show relative numbers in the active window, and absolute in others
 vim.api.nvim_create_autocmd({"WinLeave"}, {
 	pattern = { "*" },

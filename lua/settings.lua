@@ -40,7 +40,7 @@ wo.wrap				= false
 wo.foldenable		= false
 
 bo.textwidth		= 80
-wo.colorcolumn		= "+1,+2,+3"
+vim.opt.colorcolumn	= "80"
 
 
 -- Use my make wrapper, which will walk up to find a Makefile

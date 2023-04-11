@@ -150,6 +150,7 @@ return {
 
 					r = { function() require'dap'.repl.open()								end, "Open REPL"				},
 					u = { function() require("dapui").toggle()								end, "Toggle UI"				},
+					X = { function() require'dap'.clear_breakpoints()						end, "Clear Breakpoint"			},
 					C = { function() 
 							require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))()
 																							end, "Conditional Breakpoint"	},

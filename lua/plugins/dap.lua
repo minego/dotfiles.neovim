@@ -193,6 +193,18 @@ return {
 				require('dap').repl.close()	
 				require('dapui').close()
 			end
+
+			vim.api.nvim_create_autocmd( "FileType", {
+				pattern = "dap-repl",
+				callback = function()
+					require('dap.ext.autocompl').attach()
+					vim.wo.relativenumber	= false
+					vim.wo.number			= false
+					vim.o.signcolumn		= "no"
+
+					vim.cmd([[ startinsert ]])
+				end,
+			})
 		end
 	},
 
@@ -200,12 +212,6 @@ return {
 		'rcarriga/nvim-dap-ui',
 		dependencies = {
 			'mfussenegger/nvim-dap'
-		},
-
-		-- Don't load until triggered - The binding is above with the rest of
-		-- the main dap bindings.
-		keys = {
-			{ "<leader>du", nil, "Toggle DAP UI" },
 		},
 
 		enabled = function()
@@ -229,8 +235,8 @@ return {
 					-- "breakpoints",
 					"stacks",
 					-- "watches",
-					"repl",
-					"console",
+					-- "repl",
+					-- "console",
 				},
 
 				size = 80, -- 80 columns

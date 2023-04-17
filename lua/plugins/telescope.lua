@@ -24,6 +24,7 @@ return {
 					G		= { "<cmd>Telescope git_files<CR>",				"git files"				},
 					r		= { "<cmd>Telescope lsp_references<CR>",		"LSP references"		},
 					i		= { "<cmd>Telescope lsp_implementations<CR>",	"LSP implementations"	},
+					o		= { "<cmd>Telescope lsp_document_symbols<CR>",	"LSP document symbols"	},
 					D		= { "<cmd>Telescope lsp_definitions<CR>",		"LSP definitions"		},
 					d		= { "<cmd>Telescope diagnostics<CR>",			"diagnostics"			},
 					q		= { "<cmd>Telescope quickfix<CR>",				"quickfix"				},

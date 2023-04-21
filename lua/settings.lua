@@ -9,7 +9,6 @@ o.swapfile			= false
 -- Do NOT unload hidden buffer
 o.hidden			= true
 
--- Needed for firenvim
 o.guifont			= "Hack:h14"
 o.ruler				= true
 wo.signcolumn		= "yes"
@@ -115,6 +114,7 @@ vim.api.nvim_create_autocmd({"WinLeave"}, {
 	callback = function()
 		wo.cursorline		= false
 		wo.cursorcolumn		= false
+		o.signcolumn		= "no"
 	end,
 })
 vim.api.nvim_create_autocmd({"BufEnter", "WinEnter"}, {
@@ -122,6 +122,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "WinEnter"}, {
 	callback = function()
 		wo.cursorline		= true
 		wo.cursorcolumn		= true
+		o.signcolumn		= "yes"
 	end,
 })
 

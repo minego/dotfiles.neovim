@@ -6,6 +6,11 @@ return {
 		ft = "go",
 
 		opts = {
+			delve = {
+				-- port = "38697",
+				port = "40000",
+			},
+
 			dap_configurations = {
 				{
 					-- Must be "go" or it will be ignored by the plugin

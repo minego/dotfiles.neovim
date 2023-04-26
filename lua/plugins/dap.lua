@@ -197,7 +197,9 @@ return {
 			vim.api.nvim_create_autocmd( "FileType", {
 				pattern = "dap-repl",
 				callback = function()
-					require('dap.ext.autocompl').attach()
+					-- Leave this off... It is annoying
+					-- require('dap.ext.autocompl').attach()
+
 					vim.wo.relativenumber	= false
 					vim.wo.number			= false
 					vim.o.signcolumn		= "no"

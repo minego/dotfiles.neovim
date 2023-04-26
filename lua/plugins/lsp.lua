@@ -111,7 +111,6 @@ return {
 	},
 
 	{
-
 		'jose-elias-alvarez/null-ls.nvim',
 
 		dependencies = {
@@ -125,6 +124,18 @@ return {
 				sources = {
 					null_ls.builtins.code_actions.gitsigns,
 					null_ls.builtins.code_actions.gomodifytags,
+
+					null_ls.builtins.code_actions.shellcheck,               -- https://www.shellcheck.net/
+					null_ls.builtins.diagnostics.checkmake,                 -- https://github.com/mrtazz/checkmake
+					null_ls.builtins.diagnostics.codespell,                 -- https://github.com/codespell-project/codespell
+
+					null_ls.builtins.diagnostics.staticcheck,				-- https://github.com/dominikh/go-tools
+					null_ls.builtins.formatting.fixjson,                    -- https://github.com/rhysd/fixjson
+					null_ls.builtins.formatting.goimports_reviser,          -- https://pkg.go.dev/github.com/incu6us/goimports-reviser
+					null_ls.builtins.formatting.markdown_toc,               -- https://github.com/jonschlinkert/markdown-toc
+					null_ls.builtins.formatting.mdformat,                   -- https://github.com/executablebooks/mdformat
+					null_ls.builtins.formatting.shfmt,                      -- https://github.com/mvdan/sh
+					null_ls.builtins.formatting.yamlfmt                     -- https://github.com/google/yamlfmt
 				}
 			})
 		end

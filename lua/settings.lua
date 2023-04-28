@@ -13,7 +13,7 @@ o.guifont			= "Hack:h14"
 o.ruler				= true
 wo.signcolumn		= "yes"
 
--- If a buffer is open in another tab, switch to that instead of poluting the current tab
+-- If a buffer is open in another tab, switch to that instead of polluting the current tab
 o.switchbuf			= "usetab,uselast"
 
 o.mapleader			= "\\"
@@ -58,7 +58,7 @@ g.netrw_preview		= true	-- preview split to the right
 g.netrw_liststyle	= 3		-- tree view
 
 
--- I despise auto formating, auto indent, etc.
+-- I despise auto formatting, auto indent, etc.
 -- 
 -- Whenever opening any file, regardless of what plugins may do, turn that
 -- shit off!

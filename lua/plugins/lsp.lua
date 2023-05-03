@@ -120,14 +120,20 @@ return {
 		config = function()
 			null_ls = require("null-ls")
 
+			local codespell = null_ls.builtins.diagnostics.codespell.with({
+				extra_args = {
+					"-I",
+					vim.fn.expand("~/.config/nvim/codespell-ignore"),
+				},
+			})
+
 			null_ls.setup({
 				sources = {
 					null_ls.builtins.code_actions.gitsigns,
 					null_ls.builtins.code_actions.gomodifytags,
 
 					null_ls.builtins.code_actions.shellcheck,               -- https://www.shellcheck.net/
-					null_ls.builtins.diagnostics.checkmake,                 -- https://github.com/mrtazz/checkmake
-					null_ls.builtins.diagnostics.codespell,                 -- https://github.com/codespell-project/codespell
+					codespell,
 
 					null_ls.builtins.diagnostics.staticcheck,				-- https://github.com/dominikh/go-tools
 					null_ls.builtins.formatting.fixjson,                    -- https://github.com/rhysd/fixjson

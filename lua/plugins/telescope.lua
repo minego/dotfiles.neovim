@@ -35,7 +35,8 @@ return {
 				},
 			},  { mode = "n" })
 
-			wk.register({ ["z="] = { "<cmd>Telescope spell_suggest<CR>",	"Show spelling suggestsions" } }, { mode = "n", silent = true })
+			wk.register({ ["<c-k>"] = { "<cmd>Telescope buffers<CR>",		"buffers"				} })
+			wk.register({ ["z="]    = { "<cmd>Telescope spell_suggest<CR>",	"Show spelling suggestsions" } }, { mode = "n", silent = true })
 		end
 	},
 

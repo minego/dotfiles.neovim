@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Load settings before loading plugins
 require('settings')
+require('treesitter')
 
 -- Load plugins
 local lazy = require("lazy")
